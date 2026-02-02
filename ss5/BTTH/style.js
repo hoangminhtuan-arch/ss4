@@ -1,35 +1,37 @@
 let inputNumber = Number(prompt(`Nhap vao mot so`)) 
 
-if(inputNumber %2 ==0) {
-    alert(`So ${inputNumber} la so duong!!!`);
-}else if (
-    alert(`So ${inputNumber} la so am!!!`)
-)
-if(inputNumber > 0){
-    alert(`La so duong`)
-}else if( inputNumber < 0){
-    alert(`La so am`)
-}else(
-    alert(`Bang 0`)
-)
-
-while(inputNumber > 0){
-    for( let i = 0; i <= inputNumber; i++){
-        console.log(`So ${i}`);
-    }
-    break;
+if(inputNumber %2 == 0) {
+    console.log(`So ${inputNumber} la so chan`);
+    
+}else{
+    console.log(`So ${inputNumber} la so le`);
 }
 
-switch(inputNumber){
-    case inputNumber %3 == 0:
-        console.log(`fizz`);
-    break;
-    case inputNumber %5 == 0:
-        console.log(`Buzz`);
+if (inputNumber > 0){
+    console.log(`So ${inputNumber} la so duong`);
+    for(let i = 0; i <= inputNumber; i++){
+        console.log(`So ${i}`);
+    }
+}else if(inputNumber < 0){
+    console.log(`So ${inputNumber} la so am`);
+}else{
+    console.log(`La so 0`);
+    
+}
+
+switch (true) {
+    case (inputNumber % 3 === 0 && inputNumber % 5 === 0):
+        console.log("FizzBuzz");
         break;
-    case inputNumber %3 == 0 && inputNumber %5 == 0:
-        console.log(`FizzBuzz`);
+
+    case (inputNumber % 3 === 0):
+        console.log("Fizz");
+        break;
+
+    case (inputNumber % 5 === 0):
+        console.log("Buzz");
+        break;
+
     default:
-        console.log(`Chinh la so do`);
-        break;
+        console.log("Chính là số đó");
 }
